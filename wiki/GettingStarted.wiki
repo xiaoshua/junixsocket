@@ -2,7 +2,7 @@
 
 = Introduction =
 
-junixsocket is a Java/JNI library that allows the use of Unix Domain Sockets (AF_UNIX sokets) from Java. It also provides glue code such that one can actually use RMI over AF_UNIX.
+junixsocket is a Java/JNI library that allows the use of Unix Domain Sockets (AF_UNIX sockets) from Java. It also provides glue code such that one can actually use RMI over AF_UNIX.
 
 junixsocket has been written by Christian Kohlschütter. It is released under the Apache 2.0 License.
 
