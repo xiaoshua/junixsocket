@@ -1,4 +1,4 @@
-#summary Things that are still to-do
+#summary Things that are still to be done
 
 = To-do List =
 
