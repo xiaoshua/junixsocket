@@ -1,0 +1,62 @@
+#summary Using Connector/J to connect to MySQL via Unix Domain Sockets
+
+= Connecting to a MySQL database via Unix Domain Sockets =
+
+With junixsocket, this is now really easy.
+
+First, create a new MySQL SocketFactory that creates Sockets using junixsocket, just like the following:
+
+{{{
+package org.newsclub.net.mysql;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.SocketException;
+import java.util.Properties;
+
+import org.newsclub.net.unix.AFUNIXSocket;
+import org.newsclub.net.unix.AFUNIXSocketAddress;
+
+import com.mysql.jdbc.SocketFactory;
+
+public class MySQLAFUnixSocketFactory implements SocketFactory {
+
+    public MySQLAFUnixSocketFactory() {
+    }
+    private Socket socket = null;
+
+    public Socket afterHandshake() throws SocketException, IOException {
+        return socket;
+    }
+
+    public Socket beforeHandshake() throws SocketException, IOException {
+        return socket;
+    }
+
+    public Socket connect(String host, int portNumber, Properties props)
+            throws SocketException, IOException {
+        socket = AFUNIXSocket.connectTo(new AFUNIXSocketAddress(
+            // Adjust the path to your MySQL socket if required
+            new File("/tmp/mysql.sock")));
+        return socket;
+    }
+
+}
+}}}
+
+Then, you may connect to the specified MySQL database (in our example: `/tmp/mysql.sock`) using the following code:
+
+{{{
+
+ Class.forName("com.mysql.jdbc.Driver").newInstance();
+ 
+ Properties props = new Properties();
+ props.put("user", "test");
+ props.put("password", "test");
+ props.put("socketFactory", MySQLAFUnixSocketFactory.class.getName());
+
+ Connection conn = DriverManager.getConnection("jdbc:mysql://",
+                    props);
+
+}}}
