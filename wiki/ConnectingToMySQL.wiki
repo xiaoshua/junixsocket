@@ -45,7 +45,7 @@ public class MySQLAFUnixSocketFactory implements SocketFactory {
 }
 }}}
 
-Then, you may connect to the specified MySQL database (in our example: `/tmp/mysql.sock`) using the following code:
+Then, you may connect to the specified MySQL server (in our example: `/tmp/mysql.sock`) using the following code:
 
 {{{
 
