@@ -4,7 +4,7 @@
 
 With junixsocket, this is now really easy.
 
-First, create a new MySQL SocketFactory that creates Sockets using junixsocket, just like the following:
+First, create a new MySQL !SocketFactory that creates Sockets using junixsocket, just like the following:
 
 {{{
 package org.newsclub.net.mysql;
