@@ -36,16 +36,20 @@ public class MySQLAFUnixSocketFactory implements SocketFactory {
 
     public Socket connect(String host, int portNumber, Properties props)
             throws SocketException, IOException {
+        // If no socket path is given, use the default: /tmp/mysql.sock
+        final File socketFile = new File(props.get("junixsocket.file",
+           "/tmp/mysql.sock"));
+
         socket = AFUNIXSocket.connectTo(new AFUNIXSocketAddress(
             // Adjust the path to your MySQL socket if required
-            new File("/tmp/mysql.sock")));
+            socketFile));
         return socket;
     }
 
 }
 }}}
 
-Then, you may connect to the specified MySQL server (in our example: `/tmp/mysql.sock`) using the following code:
+Then, you may connect to the specified MySQL server (in our example: `/path/to/your/mysql.sock`) using the following code:
 
 {{{
 
@@ -55,6 +59,7 @@ Then, you may connect to the specified MySQL server (in our example: `/tmp/mysql
  props.put("user", "test");
  props.put("password", "test");
  props.put("socketFactory", MySQLAFUnixSocketFactory.class.getName());
+ props.put("junixsocket.file", "/path/to/your/mysql.sock");
 
  Connection conn = DriverManager.getConnection("jdbc:mysql://",
                     props);
