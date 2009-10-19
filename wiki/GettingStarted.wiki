@@ -8,4 +8,4 @@ junixsocket has been written by Christian Kohlschütter. It is released under th
 
 = Details =
 
-To be done. In the meantime, please have a look at the demo classes provided [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo here] and [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo/rmi here].
+Please have a look at the demo classes provided [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo here] and [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo/rmi here].
