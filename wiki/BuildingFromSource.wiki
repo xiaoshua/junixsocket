@@ -7,6 +7,12 @@ Just run the `build.xml` ant script:
    ant
 }}}
 
+If you get an error, first of all check if the JAVA_HOME environment variable is set and points to the correct JDK directory. You may override this setting by specifying the ant property "jdk.home", e.g.
+
+{{{
+   ant -Djdk.home=/usr/lib/jvm/java-6-sun
+}}}
+
 = Platform-specific Notes =
 
 == Linux ==
@@ -20,6 +26,8 @@ If you are running Fedora, RHEL or CentOS, you probably need to install ant-node
 == Mac OS X ==
 
 It should work without installing additional software.
+
+Tested on Leopard (10.5) and Snow Leopard (10.6). Leopard-PPC untested.
 
 == Other Platforms ==
 
