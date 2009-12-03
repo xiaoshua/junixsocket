@@ -6,6 +6,15 @@ junixsocket is a Java/JNI library that allows the use of Unix Domain Sockets (AF
 
 junixsocket has been written by Christian Kohlschütter. It is released under the Apache 2.0 License.
 
+= Getting the files =
+
+  # Download the binary and/or source tarball from the [http://code.google.com/p/junixsocket/downloads/list Downloads page]
+  # Extract the files somewhere
+{{{
+    tar xvjf junixsocket-1.1-bin.tar.bz2
+    tar xvjf junixsocket-1.1-src.tar.bz2
+}}}
+
 = Installation =
 
 junixsocket consists of pure Java component that is platform-independent and a platform-dependent JNI-native C library component (for each platform a different library file is provided.
