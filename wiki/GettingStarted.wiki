@@ -34,6 +34,26 @@ junixsocket comes with three jar files:
 
 Either just add the first, the first two or all three jars to your classpath.
 
+= Basic Usage =
+
+junixsocket supports the [http://java.sun.com/javase/6/docs/api/java/net/Socket.html Java Socket API]. `AFUNIXSocket` and `AFUNIXServerSocket` work just as their AF_INET (TCP/IP) Socket counterparts, they extend `java.net.Socket` and `java.net.ServerSocket` respectively.
+
+== Connecting to an existing AF_UNIX Socket ==
+
+{{{
+File socketFile = new File("_path to your socket_");
+AFUNIXSocket sock = AFUNIXSocket.newInstance();
+sock.connect(new AFUNIXSocketAddress(socketFile));
+}}}
+
+== Creating a new AF_UNIX Server Socket ==
+
+{{{
+File socketFile = new File("_path to your socket_");
+AFUNIXServerSocket server = AFUNIXServerSocket.newInstance();
+server.bind(new AFUNIXSocketAddress(socketFile));
+}}}
+
 = Usage Examples =
 
 Please have a look at the demo classes provided [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo here] and [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo/rmi here].
