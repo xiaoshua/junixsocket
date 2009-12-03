@@ -17,8 +17,11 @@ In order to use the Java classes the JNI library needs to be installed on a part
 The following native libraries are provided in the [http://code.google.com/p/junixsocket/downloads/list binary tarball] (directory `lib-native`):
 
 * `libjunixsocket-linux-1.5-amd64.so`  Linux Intel 64bit
+
 * `libjunixsocket-linux-1.5-i386.so`  Linux Intel 32bit
+
 * `libjunixsocket-macosx-1.5-i386.dylib`  OS X Intel 32bit
+
 * `libjunixsocket-macosx-1.5-x86_64.dylib` OS X Intel 64bit
 
 You can put the native library anywhere in your `java.library.path` (see 
@@ -29,7 +32,9 @@ http://java.sun.com/docs/books/jni/html/start.html), into the path specified for
 junixsocket comes with three jar files:
 
 # `junixsocket-1.0.jar`  The core library
+
 # `junixsocket-rmi-1.0.jar`  The RMI extension (RMI over AF_UNIX)
+
 # `junixsocket-demo-1.0.jar`  Demo classes (the jar archive contains the Java sources, too).
 
 Either just add the first, the first two or all three jars to your classpath.
