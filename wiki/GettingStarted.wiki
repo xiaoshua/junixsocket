@@ -74,6 +74,9 @@ Whereas TCP/IP sockets point to ports at particular Internet addresses, AF_UNIX 
 
 However, we need ports for RMI. This is why `AFUNIXSocketAddress` also supports them. Port support may also come handy in other situations, especially when an existing application expects a particular port on a Socket. Please be aware that specifying a particular port number has no effect for non-RMI connections.
 
-= Usage Examples =
+= Complete Examples =
 
-Please have a look at the demo classes provided [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo here] and [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo/rmi here].
+junixsocket provides working demos for:
+
+  * [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo plain Unix Domain Socket client/server communication] and for
+  * [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo/rmi RMI-over-Unix-Socket].
