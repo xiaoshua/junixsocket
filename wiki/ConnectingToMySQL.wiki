@@ -4,7 +4,7 @@
 
 With junixsocket, this is now really easy.
 
-Just include junixsocket-1.2.jar and junixsocket-mysql-1.2.jar (as well as MySQL Connector/J) in your classpath
+Just add junixsocket-1.2.jar and junixsocket-mysql-1.2.jar (as well as MySQL Connector/J) to your classpath.
 
 You may then connect to the specified MySQL server's unix socket (in our example: `/tmp/mysql.sock`) using the following code:
 
