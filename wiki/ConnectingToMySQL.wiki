@@ -4,62 +4,23 @@
 
 With junixsocket, this is now really easy.
 
-First, create a new MySQL !SocketFactory that creates Sockets using junixsocket, just like the following:
+Just include junixsocket-1.2.jar and junixsocket-mysql-1.2.jar (as well as MySQL Connector/J) in your classpath
+
+You may then connect to the specified MySQL server's unix socket (in our example: `/tmp/mysql.sock`) using the following code:
 
 {{{
-package org.newsclub.net.mysql;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.Socket;
-import java.net.SocketException;
-import java.util.Properties;
+ import org.newsclub.net.mysql.AFUNIXDatabaseSocketFactory;
 
-import org.newsclub.net.unix.AFUNIXSocket;
-import org.newsclub.net.unix.AFUNIXSocketAddress;
-
-import com.mysql.jdbc.SocketFactory;
-
-public class MysqlAFUNIXSocketFactory implements SocketFactory {
-
-    public MysqlAFUNIXSocketFactory() {
-    }
-    private Socket socket = null;
-
-    public Socket afterHandshake() throws SocketException, IOException {
-        return socket;
-    }
-
-    public Socket beforeHandshake() throws SocketException, IOException {
-        return socket;
-    }
-
-    public Socket connect(String host, int portNumber, Properties props)
-            throws SocketException, IOException {
-        // If no socket path is given, use the default: /tmp/mysql.sock
-        final File socketFile = new File(props.getProperty("junixsocket.file",
-           "/tmp/mysql.sock"));
-
-        socket = AFUNIXSocket.connectTo(new AFUNIXSocketAddress(
-            // Adjust the path to your MySQL socket if required
-            socketFile));
-        return socket;
-    }
-
-}
-}}}
-
-Then, you may connect to the specified MySQL server (in our example: `/path/to/your/mysql.sock`) using the following code:
-
-{{{
+ ...
 
  Class.forName("com.mysql.jdbc.Driver").newInstance();
  
  Properties props = new Properties();
  props.put("user", "test");
  props.put("password", "test");
- props.put("socketFactory", MySQLAFUnixSocketFactory.class.getName());
- props.put("junixsocket.file", "/path/to/your/mysql.sock");
+ props.put("socketFactory", AFUNIXDatabaseSocketFactory.class.getName());
+ props.put("junixsocket.file", "/tmp/mysql.sock");
 
  Connection conn = DriverManager.getConnection("jdbc:mysql://",
                     props);
