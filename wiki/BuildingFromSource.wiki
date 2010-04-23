@@ -33,4 +33,4 @@ Tested on Leopard (10.5) and Snow Leopard (10.6). Leopard-PPC untested.
 
 In order to use junixsocket, a native JNI library needs to be compiled. This inherently is platform-specific. The binary distribution already provides code for Mac OS X and Linux (both Intel 32-bit and 64-bit). 
 
-junixsocket probably runs on other Unixoid systems (Solaris maybe?), but that has not been tested. You need to change `build.xml` a little, and it should build. If not, you will have to modify the [http://code.google.com/p/junixsocket/source/browse/trunk/junixsocket/src/main/org/newsclub/net/unix/org_newsclub_net_unix_NativeUnixSocket.c JNI C code].
+junixsocket probably runs on other Unixoid systems (Solaris maybe?), but that has not been tested. You need to change `build.xml` a little, and it should build. If not, you will have to modify the [http://code.google.com/p/junixsocket/source/browse/trunk/junixsocket/src/main/org/newsclub/net/unix/org_newsclub_net_unix_NativeUnixSocket.c JNI C code]. Use GCC 4 if possible.
