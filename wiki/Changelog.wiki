@@ -8,6 +8,8 @@
 
    * Solaris support.
    * `InputStream#available()` now returns values > 0.
+   * Improved some warnings and error messages
+   * Improved build process
 
 == _(2010-04-22)_ *junixsocket 1.2 released.*==
 
