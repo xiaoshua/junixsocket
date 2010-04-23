@@ -1,4 +1,4 @@
-#summary A short overview of the changes in the different revisions of junixsocket
+#summary An overview of the changes in the different revisions of junixsocket, including recent changes in SVN trunk
 
 = Changelog =
 
