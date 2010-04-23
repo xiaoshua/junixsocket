@@ -5,3 +5,7 @@
 The following major things still need to be done:
 
  * Datagram Support (right now, only real sockets are supported)
+ * Windows port (Cygwin, Named Pipes)
+ * Non-blocking IO.
+
+Contributions welcome!
