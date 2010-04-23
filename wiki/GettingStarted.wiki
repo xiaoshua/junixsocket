@@ -34,6 +34,8 @@ The following native libraries are provided in the [http://code.google.com/p/jun
 You can put the native library anywhere in your `java.library.path` (see 
 http://java.sun.com/docs/books/jni/html/start.html), into the path specified for the Java system property `org.newsclub.net.unix.library.path` and into the path stored in the LIBRARY_PATH static attribute of the `NativeUnixSocketConfig` class (which is `/opt/newsclub/lib-native` by default (as a platform-independent fall-back), but this can be changed by replacing the class against a custom one).
 
+For initial testing, it is recommended to put the libraries into `/opt/newsclub/lib-native`.
+
 After updating the junixsocket jars, please do not forget to also update the native libraries.
 
 == Installing the jars ==
