@@ -11,9 +11,10 @@ junixsocket has been written by Christian Kohlschütter. It is released under th
   # Download the binary and/or source tarball from the [http://code.google.com/p/junixsocket/downloads/list Downloads page]
   # Extract the files somewhere
 {{{
-    tar xvjf junixsocket-1.1-bin.tar.bz2
-    tar xvjf junixsocket-1.1-src.tar.bz2
+    tar xvjf junixsocket-_X.Y_-bin.tar.bz2
+    tar xvjf junixsocket-_X.Y_-src.tar.bz2
 }}}
+    (where _X.Y_ stands for the version number, e.g. _1.2_)
 
 = Installation =
 
@@ -31,17 +32,20 @@ The following native libraries are provided in the [http://code.google.com/p/jun
   * `libjunixsocket-macosx-1.5-x86_64.dylib` OS X Intel 64bit
 
 You can put the native library anywhere in your `java.library.path` (see 
-http://java.sun.com/docs/books/jni/html/start.html), into the path specified for the Java system property `org.newsclub.net.unix.library.path` and into the path stored in the LIBRARY_PATH static attribute of the `NativeUnixSocketConfig` class (which is `/opt/newsclub/lib-native` by default, but this can be changed by replacing the class against a custom one).
+http://java.sun.com/docs/books/jni/html/start.html), into the path specified for the Java system property `org.newsclub.net.unix.library.path` and into the path stored in the LIBRARY_PATH static attribute of the `NativeUnixSocketConfig` class (which is `/opt/newsclub/lib-native` by default (as a platform-independent fall-back), but this can be changed by replacing the class against a custom one).
+
+After updating the junixsocket jars, please do not forget to also update the native libraries.
 
 == Installing the jars ==
 
-junixsocket comes with three jar files:
+junixsocket currently comes with four jar files:
 
-  # `junixsocket-1.0.jar`  The core library
-  # `junixsocket-rmi-1.0.jar`  The RMI extension (RMI over AF_UNIX)
-  # `junixsocket-demo-1.0.jar`  Demo classes (the jar archive contains the Java sources, too).
+  # `junixsocket-_X.Y_.jar`  The core library
+  # `junixsocket-rmi-_X.Y_.jar`  The RMI extension (RMI over AF_UNIX)
+  # `junixsocket-mysql-_X.Y_.jar`  MySQL support
+  # `junixsocket-demo-_X.Y_.jar`  Demo classes (the jar archive contains the Java sources, too).
 
-Either just add the first, the first two or all three jars to your classpath.
+The core library is required, all the others are optional.
 
 = Basic Usage =
 
@@ -89,3 +93,4 @@ junixsocket provides working demos for:
 
   * [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo plain Unix Domain Socket client/server communication] and for
   * [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo/rmi RMI-over-Unix-Socket].
+  * [http://code.google.com/p/junixsocket/source/browse/trunk/junixsocket/src/demo/org/newsclub/net/mysql/ MySQL-over-Unix-Socket].
