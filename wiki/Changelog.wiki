@@ -4,7 +4,7 @@
 
 == _(unreleased)_ *junixsocket 1.3* ==
 
-   (current work on SVN trunk)
+   Current work as on SVN trunk. Changes marked for 1.3 can be accessed [http://code.google.com/p/junixsocket/issues/list?can=1&q=milestone%3ARelease1.2+status%3AFixed%2CVerified%2CDone&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary&cells=tiles here].
 
    * Solaris support.
    * `InputStream#available()` now returns values > 0 ([http://code.google.com/p/junixsocket/issues/detail?id=11 Issue 11])
