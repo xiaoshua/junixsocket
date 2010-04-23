@@ -7,7 +7,7 @@
    (current work on SVN trunk)
 
    * Solaris support.
-   * `InputStream#available()` now returns values > 0.
+   * `InputStream#available()` now returns values > 0 ([http://code.google.com/p/junixsocket/issues/detail?id=11 Issue 11])
    * Improved some warnings and error messages
    * Improved build process
 
