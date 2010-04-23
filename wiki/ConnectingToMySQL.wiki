@@ -26,3 +26,6 @@ You may then connect to the specified MySQL server's unix socket (in our example
                     props);
 
 }}}
+
+
+A complete, working demo class is included in the distribution ([http://code.google.com/p/junixsocket/source/browse/trunk/junixsocket/src/demo/org/newsclub/net/mysql/AFUNIXDatabaseSocketFactoryDemo.java source code]).
