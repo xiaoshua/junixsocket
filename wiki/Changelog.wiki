@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary A short overview of the changes in the different revisions of junixsocket
 
 = Changelog =
 
