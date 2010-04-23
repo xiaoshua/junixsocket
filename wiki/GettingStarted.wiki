@@ -11,8 +11,8 @@ junixsocket has been written by Christian Kohlschütter. It is released under th
   # Download the binary and/or source tarball from the [http://code.google.com/p/junixsocket/downloads/list Downloads page]
   # Extract the files somewhere
 {{{
-    tar xvjf junixsocket-_X.Y_-bin.tar.bz2
-    tar xvjf junixsocket-_X.Y_-src.tar.bz2
+    tar xvjf junixsocket-X.Y-bin.tar.bz2
+    tar xvjf junixsocket-X.Y-src.tar.bz2
 }}}
     (where _X.Y_ stands for the version number, e.g. _1.2_)
 
@@ -40,10 +40,10 @@ After updating the junixsocket jars, please do not forget to also update the nat
 
 junixsocket currently comes with four jar files:
 
-  # `junixsocket-_X.Y_.jar`  The core library
-  # `junixsocket-rmi-_X.Y_.jar`  The RMI extension (RMI over AF_UNIX)
-  # `junixsocket-mysql-_X.Y_.jar`  MySQL support
-  # `junixsocket-demo-_X.Y_.jar`  Demo classes (the jar archive contains the Java sources, too).
+  # `junixsocket-X.Y.jar`  The core library
+  # `junixsocket-rmi-X.Y.jar`  The RMI extension (RMI over AF_UNIX)
+  # `junixsocket-mysql-X.Y.jar`  MySQL support
+  # `junixsocket-demo-X.Y.jar`  Demo classes (the jar archive contains the Java sources, too).
 
 The core library is required, all the others are optional.
 
