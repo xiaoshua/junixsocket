@@ -4,10 +4,10 @@
 
 == _(unreleased)_ *junixsocket 1.3* ==
 
-(current work on SVN trunk)
+   (current work on SVN trunk)
 
-* Solaris support.
-* `InputStream#available()` now returns values > 0.
+   * Solaris support.
+   * `InputStream#available()` now returns values > 0.
 
 == _(2010-04-22)_ *junixsocket 1.2 released.*==
 
