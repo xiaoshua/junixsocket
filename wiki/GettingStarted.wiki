@@ -70,26 +70,6 @@ AFUNIXServerSocket server = AFUNIXServerSocket.newInstance();
 server.bind(new AFUNIXSocketAddress(socketFile));
 }}}
 
-== Caveats ==
-
-=== Maximum path length ===
-
-At system-level the pathname of a Unix domain sockets is limited in length. The maximum varies from one OS to another. Currently, junixsocket limits the maximum pathname length to 103 bytes (this may mean less characters). If the maximum length is exceeded an Exception is thrown.
-
-It is therefore recommended to use short pathnames whenever possible.
-
-=== Security ===
-
-Unix domain sockets are created with read-write privileges for everybody on the sytem, just like TCP/IP sockets are accessible for local users.
-
-If you want to restrict access to a particular user or group, simply create the socket in a directory that has proper access restrictions.
-
-=== Ports ===
-
-Whereas TCP/IP sockets point to ports at particular Internet addresses, AF_UNIX sockets point to special files on the local file system. The notion of "port" is not necessary in this case.
-
-However, we need ports for RMI. This is why `AFUNIXSocketAddress` also supports them. Port support may also come handy in other situations, especially when an existing application expects a particular port on a Socket. Please be aware that specifying a particular port number has no effect for non-RMI connections.
-
 = Complete Examples =
 
 junixsocket provides working demos for:
@@ -97,3 +77,23 @@ junixsocket provides working demos for:
   * [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo plain Unix Domain Socket client/server communication] and for
   * [http://code.google.com/p/junixsocket/source/browse/#svn/trunk/junixsocket/src/demo/org/newsclub/net/unix/demo/rmi RMI-over-Unix-Socket].
   * [http://code.google.com/p/junixsocket/source/browse/trunk/junixsocket/src/demo/org/newsclub/net/mysql/ MySQL-over-Unix-Socket].
+
+= Caveats =
+
+== Maximum path length ==
+
+At system-level the pathname of a Unix domain sockets is limited in length. The maximum varies from one OS to another. Currently, junixsocket limits the maximum pathname length to 103 bytes (this may mean less characters). If the maximum length is exceeded an Exception is thrown.
+
+It is therefore recommended to use short pathnames whenever possible.
+
+== Security ==
+
+Unix domain sockets are created with read-write privileges for everybody on the sytem, just like TCP/IP sockets are accessible for local users.
+
+If you want to restrict access to a particular user or group, simply create the socket in a directory that has proper access restrictions.
+
+== Ports ==
+
+Whereas TCP/IP sockets point to ports at particular Internet addresses, AF_UNIX sockets point to special files on the local file system. The notion of "port" is not necessary in this case.
+
+However, we need ports for RMI. This is why `AFUNIXSocketAddress` also supports them. Port support may also come handy in other situations, especially when an existing application expects a particular port on a Socket. Please be aware that specifying a particular port number has no effect for non-RMI connections.
