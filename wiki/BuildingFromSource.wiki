@@ -41,11 +41,7 @@ You may then later run the tests separately using
 
 == Linux ==
 
-If you are running Fedora, RHEL or CentOS, you probably need to install ant-nodeps (for the `javah` ant target) and ant-junit from [http://jpackage.org/ jpackage]:
-
-{{{
-   yum -y install ant-nodeps ant-junit
-}}}
+If you are running Fedora, RHEL or CentOS, you probably need to install ant-nodeps (for the `javah` ant target) and ant-junit from [http://jpackage.org/ jpackage].
 
 == Mac OS X ==
 
