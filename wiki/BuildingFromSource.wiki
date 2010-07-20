@@ -2,7 +2,7 @@
 
 = Quick Start =
 
-Building junixsocket requires [http://ant.apache.org Apache Ant] (>= 1.6) and [http://junit.sourceforge.net/ JUnit] (>= 4.0).
+Building junixsocket requires [http://ant.apache.org Apache Ant] (>= 1.7) and [http://junit.sourceforge.net/ JUnit] (>= 4.0).
 
 In most cases, compilation is as easy as to just run the `build.xml` ant script:
 {{{
