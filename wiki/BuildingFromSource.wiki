@@ -23,7 +23,7 @@ Compiling the native libraries probably requires GCC 4. For some platforms, you 
 
 = Automated JUnit tests =
 
-If you do not want to run automated JUnit tests along with the compilation process, use the following switch:
+If you do not want to run JUnit tests along with the compilation process, use the following switch:
 
 {{{
    ant -DskipTest=true
