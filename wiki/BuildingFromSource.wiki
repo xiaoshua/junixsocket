@@ -21,6 +21,21 @@ Compiling the native libraries probably requires GCC 4. For some platforms, you 
    ant -Dgcc=/usr/bin/gcc-4.3.2
 }}}
 
+= Automated JUnit tests =
+
+If you do not want to run automated JUnit tests along with the compilation process, use the following switch:
+
+{{{
+   ant -DskipTest=true
+}}}
+
+You may then later run the tests separately using
+
+{{{
+   ant test
+}}}
+
+
 
 = Platform-specific Notes =
 
@@ -47,3 +62,16 @@ You need to install GCC 4 (e.g., package `gcc-4.3.2`) and Jakarta ANT (package `
 In order to use junixsocket, a native JNI library needs to be compiled. This inherently is platform-specific. The binary distribution already provides code for Mac OS X and Linux (both Intel 32-bit and 64-bit). 
 
 junixsocket probably runs on other Unixoid systems, but not all of them have been tested. You need to change `build.xml` a little, and it should build. If not, you will have to modify the [http://code.google.com/p/junixsocket/source/browse/trunk/junixsocket/src/main/org/newsclub/net/unix/org_newsclub_net_unix_NativeUnixSocket.c JNI C code]. Use GCC 4 to compile the code.
+
+== 32-bit / 64-bit ==
+
+Some platforms cannot compile code for both 32-bit and 64-bit architectures.
+Use one of the following switches to forcibly deactivate compilation of the corresponding architecture:
+
+{{{
+   ant -Dskip32=true
+}}}
+
+{{{
+   ant -Dskip64=true
+}}}
