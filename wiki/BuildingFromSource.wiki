@@ -2,7 +2,9 @@
 
 = Quick Start =
 
-Just run the `build.xml` ant script:
+Building junixsocket requires [http://ant.apache.org Apache Ant] (>= 1.6) and [http://junit.sourceforge.net/ JUnit] (>= 4.0).
+
+In most cases, compilation is as easy as to just run the `build.xml` ant script:
 {{{
    ant
 }}}
@@ -24,10 +26,10 @@ Compiling the native libraries probably requires GCC 4. For some platforms, you 
 
 == Linux ==
 
-If you are running Fedora, RHEL or CentOS, you probably need to install ant-nodeps (for the `javah` ant target):
+If you are running Fedora, RHEL or CentOS, you probably need to install ant-nodeps (for the `javah` ant target) and ant-junit from [http://jpackage.org/ jpackage]:
 
 {{{
-   yum -y install ant-nodeps
+   yum -y install ant-nodeps ant-junit
 }}}
 
 == Mac OS X ==
