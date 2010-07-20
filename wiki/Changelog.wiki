@@ -8,7 +8,7 @@
 
    * Solaris support.
    * `InputStream#available()` now returns values > 0 ([http://code.google.com/p/junixsocket/issues/detail?id=11 Issue 11])
-   * Added explicit mapping of java.net.SocketOptions values into NativeUnixSocket.c ([http://code.google.com/p/junixsocket/issues/detail?id=12 Issue 12])
+   * Added explicit mapping of `java.net.SocketOptions` values ([http://code.google.com/p/junixsocket/issues/detail?id=12 Issue 12])
    * Improved some warnings and error messages
    * Improved build process
 
