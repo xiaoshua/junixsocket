@@ -43,6 +43,13 @@ You may then later run the tests separately using
 
 If you are running Fedora, RHEL or CentOS, you probably need to install ant-nodeps (for the `javah` ant target) and ant-junit from [http://jpackage.org/ jpackage].
 
+If you have configured yum to use jpackage, but still only get junit 1.6 RPMs, try disabling the base repository:
+
+{{{
+   yum --disablerepo=base install ant-nodeps ant-junit
+}}}
+
+
 == Mac OS X ==
 
 It should work without installing additional software.
